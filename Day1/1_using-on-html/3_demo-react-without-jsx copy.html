@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Demo</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const LoginComponent = React.createElement('div', null,
+            React.createElement('input', { type: 'text', placeholder: 'Enter Username' }),
+            React.createElement('input', { type: 'password', placeholder: 'Enter Password' }),
+            React.createElement('button', { onClick: () => { alert("Logged In!") } }, "Click Me")
+        );
+
+        const app = document.querySelector('#app');
+        const root = ReactDOM.createRoot(app);
+        root.render(LoginComponent);
+    </script>
+</body>
+
+</html>
