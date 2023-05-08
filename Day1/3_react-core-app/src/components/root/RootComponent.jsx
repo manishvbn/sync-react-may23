@@ -18,6 +18,7 @@ import ComponentTwo from '../6_styled-components/ComponentTwo';
 import ComponentWithState from '../7_comp-state/ComponentWithState';
 import ComponentWithProps from '../8_comp-props/ComponentWithProps';
 import PropTypesRoot from '../9_prop-types/PropTypesRoot';
+import ComponentWithBehaviour from '../10_comp-methods/ComponentWithBehaviour';
 
 const RootComponent = () => {
     return (
@@ -28,7 +29,8 @@ const RootComponent = () => {
             {/* <ComponentWithState /> */}
             {/* <ComponentWithProps id={1} name={"Manish"} address={{ city: "Pune", state: "MH" }}
                 display={() => { alert("From Root"); }} /> */}
-            <PropTypesRoot />
+            {/* <PropTypesRoot /> */}
+            <ComponentWithBehaviour />
         </div>
     );
 };
