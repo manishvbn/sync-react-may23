@@ -15,11 +15,15 @@ import React from 'react';
 import ComponentOne from '../6_styled-components/ComponentOne';
 import ComponentTwo from '../6_styled-components/ComponentTwo';
 
+import ComponentWithState from '../7_comp-state/ComponentWithState';
+
 const RootComponent = () => {
     return (
         <div className='container'>
-            <ComponentOne />
-            <ComponentTwo />
+            {/* <ComponentOne />
+            <ComponentTwo /> */}
+
+            <ComponentWithState />
         </div>
     );
 };
