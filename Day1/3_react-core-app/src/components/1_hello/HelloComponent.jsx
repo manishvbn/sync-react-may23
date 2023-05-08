@@ -119,11 +119,23 @@
 //     );
 // }
 
+// const HelloComponent = () => (
+//     <>
+//         <h1>Hello World!</h1>
+//         <h1>Singleline Arrow Function Syntax!</h1>
+//     </>
+// );
+
+// export default HelloComponent;
+
+// --------------------------------------------------- Using Global CSS
+
 const HelloComponent = () => (
-    <>
-        <h1>Hello World!</h1>
-        <h1>Singleline Arrow Function Syntax!</h1>
-    </>
+    <div className="container text-center">
+        <h1 className="red">Hello World!</h1>
+        <h1 className="text-primary">Hello World Again!</h1>
+        <h1 className="text-success bi bi-activity"></h1>
+    </div>
 );
 
 export default HelloComponent;
