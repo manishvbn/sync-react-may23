@@ -9,8 +9,11 @@ import React from 'react';
 // import ComponentOne from '../4_external-css/comp-one/ComponentOne';
 // import ComponentTwo from '../4_external-css/comp-two/ComponentTwo';
 
-import ComponentOne from '../5_css-modules/comp-one/ComponentOne';
-import ComponentTwo from '../5_css-modules/comp-two/ComponentTwo';
+// import ComponentOne from '../5_css-modules/comp-one/ComponentOne';
+// import ComponentTwo from '../5_css-modules/comp-two/ComponentTwo';
+
+import ComponentOne from '../6_styled-components/ComponentOne';
+import ComponentTwo from '../6_styled-components/ComponentTwo';
 
 const RootComponent = () => {
     return (
