@@ -1,2 +1,2 @@
 # sync-react-may23
- React with Redux TRaining for Synechron
+ React with Redux Training for Synechron
