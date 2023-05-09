@@ -7,16 +7,21 @@ import CounterAssignment from '../3_counter-assignment/CounterAssignment';
 import SiblingCommunicationRoot from '../4_sibling-communication/SiblingCommunication';
 import ControlledVsUncontrolledComponent from '../5_controlled-vs-uncontrolled/ControlledVsUncontrolledComponent';
 import CalculatorAssignment from '../6_calculator-assignment/CalculatorAssignment';
+import ListRoot from '../7_list/ListRoot';
+import ErrorHandler from '../common/ErrorHandler';
 
 const RootComponent = () => {
     return (
         <div className='container'>
-            {/* <PureImpureComponent /> */}
-            {/* <EventComponent /> */}
-            {/* <CounterAssignment /> */}
-            {/* <SiblingCommunicationRoot /> */}
-            {/* <ControlledVsUncontrolledComponent /> */}
-            <CalculatorAssignment />
+            <ErrorHandler>
+                {/* <PureImpureComponent /> */}
+                {/* <EventComponent /> */}
+                {/* <CounterAssignment /> */}
+                {/* <SiblingCommunicationRoot /> */}
+                {/* <ControlledVsUncontrolledComponent /> */}
+                {/* <CalculatorAssignment /> */}
+                <ListRoot />
+            </ErrorHandler>
         </div>
     );
 };
