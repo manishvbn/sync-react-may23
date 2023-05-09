@@ -4,13 +4,15 @@ import React from 'react';
 import PureImpureComponent from '../1_pure-vs-impure/PureImpureComponent';
 import EventComponent from '../2_synthetic-event/EventComponent';
 import CounterAssignment from '../3_counter-assignment/CounterAssignment';
+import SiblingCommunicationRoot from '../4_sibling-communication/SiblingCommunication';
 
 const RootComponent = () => {
     return (
         <div className='container'>
             {/* <PureImpureComponent /> */}
             {/* <EventComponent /> */}
-            <CounterAssignment />
+            {/* <CounterAssignment /> */}
+            <SiblingCommunicationRoot />
         </div>
     );
 };
