@@ -10,6 +10,7 @@ import CalculatorAssignment from '../6_calculator-assignment/CalculatorAssignmen
 import ListRoot from '../7_list/ListRoot';
 import ErrorHandler from '../common/ErrorHandler';
 import ContextComponent from '../8_context-api/ContextComponent';
+import SiblingCommunicationContextRoot from '../9_sibling-communication-context/SiblingCommunication';
 
 const RootComponent = () => {
     return (
@@ -22,7 +23,8 @@ const RootComponent = () => {
                 {/* <ControlledVsUncontrolledComponent /> */}
                 {/* <CalculatorAssignment /> */}
                 {/* <ListRoot /> */}
-                <ContextComponent />
+                {/* <ContextComponent /> */}
+                <SiblingCommunicationContextRoot />
             </ErrorHandler>
         </div>
     );
