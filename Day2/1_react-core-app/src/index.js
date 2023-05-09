@@ -10,7 +10,7 @@ import RootComponent from './components/root/RootComponent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <RootComponent />
+    <RootComponent />
   // </React.StrictMode>
 );
 

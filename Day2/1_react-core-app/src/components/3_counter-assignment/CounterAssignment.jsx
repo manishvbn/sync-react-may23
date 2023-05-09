@@ -80,15 +80,52 @@ class Counter extends Component {
     }
 }
 
-
 class CounterAssignment extends Component {
+    constructor(props) {
+        super(props);
+        this._counter = React.createRef();
+        this.p_reset = this.p_reset.bind(this);
+    }
+
+    p_reset() {
+        // if (this.refs.c) {
+        //     console.log(this.refs.c);
+        //     this.refs.c.reset();
+        // }
+
+        // if (this.c) {
+        //     console.log(this.c);
+        //     this.c.reset();
+        // }
+
+        if (this._counter.current) {
+            console.log(this._counter);
+            this._counter.current.reset();
+        }
+    }
+
     render() {
         return (
             <>
-                <Counter />
-                <hr />
-                <Counter interval={10} />
+                <h2 className="text-success text-center mt-5 mb-5">Calling Child Method from Parent using ref</h2>
+
+                {/* <Counter ref="c" /> */}
+                {/* <Counter ref={(elem) => { this.c = elem; }} /> */}
+
+                <Counter ref={this._counter} />
+
+                <div className="d-grid gap-2 mx-auto col-6 mt-5">
+                    <button className="btn btn-warning" onClick={this.p_reset}>
+                        <span className='fs-4'>Parent Reset</span>
+                    </button>
+                </div>
             </>
+
+            // <>
+            //     <Counter />
+            //     <hr />
+            //     <Counter interval={10} />
+            // </>
         );
     }
 }
