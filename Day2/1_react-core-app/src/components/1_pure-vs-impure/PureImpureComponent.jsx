@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import MyImpureComponent from './MyImpureComponent';
 import MyPureComponent from './MyPureComponent';

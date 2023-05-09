@@ -72,3 +72,5 @@ class MyPureComponent extends PureComponent {
 }
 
 export default MyPureComponent;
+
+// React.PureComponent's shouldComponentUpdate() only shallowly compares the objects.

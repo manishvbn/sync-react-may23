@@ -36,3 +36,46 @@ root.render(
 
 // var newArr2 = append(arr, 50);
 // console.log(newArr2);           // [10, 20, 30, 50]
+
+// -------------
+
+// const test = () => { };
+
+// class Employee {
+//   constructor(name) {
+//     this._name = name;
+//   }
+
+//   getName() {
+//     return this._name;
+//   }
+
+//   setName(value) {
+//     this._name = value;
+//   }
+
+//   // Should not create Arrow as Member Function
+//   // getName = () => {
+//   //   return this._name;
+//   // }
+
+//   // setName = (value) => {
+//   //   this._name = value;
+//   // }
+// }
+
+// var e1 = new Employee("Manish");
+// console.log(e1.getName());
+// e1.setName("Abhijeet");
+// console.log(e1.getName());
+
+// var e2 = new Employee("Subodh");
+// console.log(e2.getName());
+// e2.setName("Ramakant");
+// console.log(e2.getName());
+
+// console.log(e1);
+// console.log(e2);
+
+// // 104 bytes
+// // 288 bytes - Arrow (Increase Memory Usage)
