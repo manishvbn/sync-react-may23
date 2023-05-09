@@ -9,6 +9,7 @@ import ControlledVsUncontrolledComponent from '../5_controlled-vs-uncontrolled/C
 import CalculatorAssignment from '../6_calculator-assignment/CalculatorAssignment';
 import ListRoot from '../7_list/ListRoot';
 import ErrorHandler from '../common/ErrorHandler';
+import ContextComponent from '../8_context-api/ContextComponent';
 
 const RootComponent = () => {
     return (
@@ -20,7 +21,8 @@ const RootComponent = () => {
                 {/* <SiblingCommunicationRoot /> */}
                 {/* <ControlledVsUncontrolledComponent /> */}
                 {/* <CalculatorAssignment /> */}
-                <ListRoot />
+                {/* <ListRoot /> */}
+                <ContextComponent />
             </ErrorHandler>
         </div>
     );
