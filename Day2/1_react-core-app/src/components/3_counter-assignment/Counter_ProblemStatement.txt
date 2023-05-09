@@ -12,4 +12,4 @@ The + and - button should be disabled and reset button should be enabled.
 
 When we click Reset button, everything should be re-initialized.
 
-Completion Time : 10:15
+Completion Time : 11:15
