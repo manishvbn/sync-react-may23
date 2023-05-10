@@ -10,6 +10,7 @@ import EffectHookAjax from '../3_hooks/3_EffectHookAjax';
 import AssignmentComponent from '../3_hooks/4_Assignment';
 import ReducerHookDemo from '../3_hooks/5_ReducerHookDemo';
 import ContextHookDemo from '../3_hooks/6_ContextHookDemo';
+import CustomHookDemo from '../3_hooks/7_CustomHookDemo';
 
 const RootComponent = () => {
     return (
@@ -22,7 +23,8 @@ const RootComponent = () => {
                 {/* <EffectHookAjax /> */}
                 {/* <AssignmentComponent /> */}
                 {/* <ReducerHookDemo /> */}
-                <ContextHookDemo />
+                {/* <ContextHookDemo /> */}
+                <CustomHookDemo />
             </ErrorHandler>
         </div>
     );
