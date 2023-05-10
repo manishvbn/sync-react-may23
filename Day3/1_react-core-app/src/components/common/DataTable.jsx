@@ -15,11 +15,30 @@ const Ths = ({ item }) => {
     );
 };
 
-const Trs = ({ item }) => {
+const Trs = ({ item, onSelect, onDelete }) => {
     var allValues = Object.values(item).concat(
-        <a href='/#' className='text-primary'>Details</a>,
-        <a href='/#' className='text-warning'>Edit</a>,
-        <a href='/#' className='text-danger'>Delete</a>
+        <a href='/#' className='text-primary' onClick={
+            (e) => {
+                e.preventDefault();
+                if (onSelect)
+                    onSelect(item, false);
+            }
+        }>Details</a>,
+        <a href='/#' className='text-warning' onClick={
+            (e) => {
+                e.preventDefault();
+                if (onSelect)
+                    onSelect(item, true);
+            }
+        }>Edit</a>,
+        <a href='/#' className='text-danger' onClick={
+            (e) => {
+                e.preventDefault();
+                if (onDelete)
+                    if (window.confirm('Are you sure, you want to delete the record?'))
+                        onDelete(item.id);
+            }
+        }>Delete</a>
     );
 
     var tds = allValues.map((item, index) => {
@@ -33,12 +52,12 @@ const Trs = ({ item }) => {
     );
 };
 
-const DataTable = ({ items, children }) => {
+const DataTable = ({ items, children, onSelect, onDelete }) => {
     if (items && items.length) {
         var [item] = items;
         var ths = <Ths item={item} />;
         var trs = items.map((item, index) => {
-            return <Trs key={item.id} item={item} />;
+            return <Trs key={item.id} item={item} onSelect={onSelect} onDelete={onDelete} />;
         });
     }
 
