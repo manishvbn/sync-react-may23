@@ -11,6 +11,7 @@ import AssignmentComponent from '../3_hooks/4_Assignment';
 import ReducerHookDemo from '../3_hooks/5_ReducerHookDemo';
 import ContextHookDemo from '../3_hooks/6_ContextHookDemo';
 import CustomHookDemo from '../3_hooks/7_CustomHookDemo';
+import CounterRoot from '../3_hooks/counter-context/CounterRoot';
 
 const RootComponent = () => {
     return (
@@ -24,7 +25,8 @@ const RootComponent = () => {
                 {/* <AssignmentComponent /> */}
                 {/* <ReducerHookDemo /> */}
                 {/* <ContextHookDemo /> */}
-                <CustomHookDemo />
+                {/* <CustomHookDemo /> */}
+                <CounterRoot />
             </ErrorHandler>
         </div>
     );
