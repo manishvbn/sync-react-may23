@@ -13,12 +13,12 @@ const AssignmentComponent = (props) => {
         if (isInititalMount.current) {
             isInititalMount.current = false;
         } else {
-            if (count !== 0) {
+            // if (count !== 0) {
                 clickCount.current += 1;
                 if (clickCount.current > 9) {
                     setFlag(true);
                 }
-            }
+            // }
         }
     }, [count]);
 

@@ -8,6 +8,8 @@ import StateHookDemo from '../3_hooks/1_StateHookDemo';
 import EffectHookDemo from '../3_hooks/2_EffectHookDemo';
 import EffectHookAjax from '../3_hooks/3_EffectHookAjax';
 import AssignmentComponent from '../3_hooks/4_Assignment';
+import ReducerHookDemo from '../3_hooks/5_ReducerHookDemo';
+import ContextHookDemo from '../3_hooks/6_ContextHookDemo';
 
 const RootComponent = () => {
     return (
@@ -18,7 +20,9 @@ const RootComponent = () => {
                 {/* <StateHookDemo /> */}
                 {/* <EffectHookDemo /> */}
                 {/* <EffectHookAjax /> */}
-                <AssignmentComponent />
+                {/* <AssignmentComponent /> */}
+                {/* <ReducerHookDemo /> */}
+                <ContextHookDemo />
             </ErrorHandler>
         </div>
     );
