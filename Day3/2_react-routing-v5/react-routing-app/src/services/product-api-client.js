@@ -1,3 +1,5 @@
+import authenticatorClient from "./authenticator-api-client";
+
 const url = process.env.REACT_APP_PRODUCTS_API_URL;
 
 const productApiClient = {
@@ -6,7 +8,8 @@ const productApiClient = {
             let fData = {
                 method: "GET",
                 headers: {
-                    "accept": "application/json"
+                    "accept": "application/json",
+                    "x-access-token": authenticatorClient.getToken()
                 }
             };
 
