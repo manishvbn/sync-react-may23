@@ -3,7 +3,6 @@ import LoaderAnimation from '../common/LoaderAnimation';
 import DataTable from '../common/DataTable';
 import postApiClient from '../../services/post-api-client';
 
-
 class AjaxComponent extends Component {
     constructor(props) {
         super(props);

@@ -5,6 +5,9 @@ import ErrorHandler from '../common/ErrorHandler';
 import CrudAssignment from '../1_crud-assignment/CrudAssignment';
 import AjaxComponent from '../2_ajax/AjaxComponent';
 import StateHookDemo from '../3_hooks/1_StateHookDemo';
+import EffectHookDemo from '../3_hooks/2_EffectHookDemo';
+import EffectHookAjax from '../3_hooks/3_EffectHookAjax';
+import AssignmentComponent from '../3_hooks/4_Assignment';
 
 const RootComponent = () => {
     return (
@@ -12,7 +15,10 @@ const RootComponent = () => {
             <ErrorHandler>
                 {/* <CrudAssignment /> */}
                 {/* <AjaxComponent /> */}
-                <StateHookDemo />
+                {/* <StateHookDemo /> */}
+                {/* <EffectHookDemo /> */}
+                {/* <EffectHookAjax /> */}
+                <AssignmentComponent />
             </ErrorHandler>
         </div>
     );
