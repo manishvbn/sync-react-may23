@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import ConfirmModal from './ConfirmModal';
 
 const Ths = ({ item }) => {
     var allHeads = Object.keys(item).concat("", "actions", "");
@@ -16,6 +17,8 @@ const Ths = ({ item }) => {
 };
 
 const Trs = ({ item, onSelect, onDelete }) => {
+    const [show, setShow] = useState(false);
+
     var allValues = Object.values(item).concat(
         <a href='/#' className='text-primary' onClick={
             (e) => {
@@ -35,8 +38,9 @@ const Trs = ({ item, onSelect, onDelete }) => {
             (e) => {
                 e.preventDefault();
                 if (onDelete)
-                    if (window.confirm('Are you sure, you want to delete the record?'))
-                        onDelete(item.id);
+                    setShow(true);
+                // if (window.confirm('Are you sure, you want to delete the record?'))
+                //     onDelete(item.id);
             }
         }>Delete</a>
     );
@@ -46,9 +50,20 @@ const Trs = ({ item, onSelect, onDelete }) => {
     });
 
     return (
-        <tr>
-            {tds}
-        </tr>
+        <>
+            <tr>
+                {tds}
+            </tr>
+            <ConfirmModal show={show} title={"Confirm Delete"}
+                message={"Are you sure, you want to delete this record?"}
+                handleYes={e => {
+                    onDelete(item.id);
+                    setShow(false);
+                }}
+                handleNo={e => {
+                    setShow(false);
+                }} />
+        </>
     );
 };
 
