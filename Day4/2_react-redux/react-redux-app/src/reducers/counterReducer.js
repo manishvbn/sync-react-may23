@@ -15,6 +15,9 @@ const counterReducer = (state = initialState.count, action) => {
         case actionTypes.DECREMENT_COUNTER:
             newState = state - action.payload;
             return newState;
+        case actionTypes.MULTIPLY_COUNTER:
+            newState = state * action.payload;
+            return newState;
         default:
             return state;
     }

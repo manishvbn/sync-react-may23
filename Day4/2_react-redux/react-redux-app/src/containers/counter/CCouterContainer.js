@@ -7,11 +7,13 @@ import CounterSiblingComponent from '../../components/counter/CounterSiblingComp
 
 class CCouterContainer extends Component {
     render() {
+        // console.log("C Container rendered....");
         return (
             <>
                 <CounterComponent count={this.props.count}
                     inc={this.props.incCounter}
-                    dec={this.props.decCounter} />
+                    dec={this.props.decCounter}
+                    mul={this.props.mulCounter} />
                 <hr />
                 <CounterSiblingComponent count={this.props.count} />
             </>
@@ -29,6 +31,7 @@ function mapDispatchToProps(dispatch) {
     return {
         incCounter: (by) => { dispatch(counterActions.incCounter(by)); },
         decCounter: (by) => { dispatch(counterActions.decCounter(by)); },
+        mulCounter: (by) => { dispatch(counterActions.mulCounter(by)); }
     };
 }
 

@@ -17,3 +17,12 @@ export function decCounter(interval = 1) {
         payload: interval
     };
 }
+
+// Action Creator
+export function mulCounter(interval = 1) {
+    // Create and Return an Action Object
+    return {
+        type: actionTypes.MULTIPLY_COUNTER,
+        payload: interval
+    };
+}

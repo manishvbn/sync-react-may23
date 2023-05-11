@@ -24,6 +24,13 @@ const CounterComponent = (props) => {
                 }>
                     <span className='fs-4'>-</span>
                 </button>
+                <button className="btn btn-primary" onClick={
+                    (e) => {
+                        props.mul(5);
+                    }
+                }>
+                    <span className='fs-4'>*</span>
+                </button>
             </div>
         </>
     );
