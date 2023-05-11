@@ -14,7 +14,7 @@ const NavigationComponent = () => {
                 <div className="container-fluid">
                     <NavLink className="navbar-brand d-flex flex-column align-items-center" to="/">
                         <img src={logo} alt="React" width="40" height="28" className="d-inline-block align-text-top" />
-                        React Redux
+                        Redux Toolkit
                     </NavLink>
 
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myNavbar">
@@ -39,24 +39,6 @@ const NavigationComponent = () => {
                                 <NavLink className="nav-link d-flex flex-column align-items-center" to="/counter">
                                     <i className="bi bi-123"></i>
                                     <span>Counter</span>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item px-3">
-                                <NavLink className="nav-link d-flex flex-column align-items-center" to="/fcounter">
-                                    <i className="bi bi-123"></i>
-                                    <span>FCounter</span>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item px-3">
-                                <NavLink className="nav-link d-flex flex-column align-items-center" to="/fcounterroot">
-                                    <i className="bi bi-123"></i>
-                                    <span>Without Container</span>
-                                </NavLink>
-                            </li>
-                            <li className="nav-item px-3">
-                                <NavLink className="nav-link d-flex flex-column align-items-center" to="/products">
-                                    <i className="bi bi-box"></i>
-                                    <span>Products</span>
                                 </NavLink>
                             </li>
                         </ul>

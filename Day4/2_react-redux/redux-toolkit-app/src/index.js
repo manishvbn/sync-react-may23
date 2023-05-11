@@ -9,15 +9,11 @@ import { Provider } from 'react-redux';
 import 'bootstrap';
 
 import RootComponent from './components/root/RootComponent';
-import configureStore from './store/configureStore';
-
-const appStore = configureStore();
-// const appStore = configureStore({ counter: 1000 });
-// console.log(appStore.getState());
+import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={appStore}>
+  <Provider store={store}>
     <RootComponent />
   </Provider>
 );

@@ -2,14 +2,10 @@ import React, { Suspense, lazy } from "react";
 import { Route, Switch, Link, useLocation } from "react-router-dom";
 
 import LoaderAnimation from '../components/common/LoaderAnimation';
-import FCounterRoot from "../components/f-counter/FCounterRoot";
 
 const AboutComponent = lazy(() => import('../components/about/AboutComponent'));
 const HomeComponent = lazy(() => import('../components/home/HomeComponent'));
-const CCouterContainer = lazy(() => import("../containers/counter/CCouterContainer"));
-const FCounterContainer = lazy(() => import("../containers/counter/FCounterContainer"));
-const ProductsContainer = lazy(() => import("../containers/products/ProductsContainer"));
-const ManageProductContainer = lazy(() => import("../containers/products/ManageProductContainer"));
+const CounterComponent = lazy(() => import("../components/counter/CounterComponent"));
 
 const img404 = require('../assets/http-404.jpg');
 
@@ -18,12 +14,7 @@ export default (
         <Switch>
             <Route exact path="/" component={HomeComponent} />
             <Route path="/about" component={AboutComponent} />
-            <Route path="/counter" component={CCouterContainer} />
-            <Route path="/fcounter" component={FCounterContainer} />
-            <Route path="/fcounterroot" component={FCounterRoot} />
-            <Route path="/products" component={ProductsContainer} />
-            <Route path="/product/:id" component={ManageProductContainer} />
-            <Route path="/product" component={ManageProductContainer} />
+            <Route path="/counter" component={CounterComponent} />
             <Route path="*">
                 <NoMatch />
             </Route>

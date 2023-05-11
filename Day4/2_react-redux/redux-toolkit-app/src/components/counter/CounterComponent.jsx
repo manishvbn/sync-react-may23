@@ -1,6 +1,11 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, decrementBy, increment, incrementBy, selectCount } from '../../features/counter/counterSlice';
 
-const CounterComponent = (props) => {
+const CounterComponent = () => {
+    const count = useSelector(selectCount);
+    const dispatch = useDispatch();
+
     return (
         <>
             <div className="text-center">
@@ -8,28 +13,35 @@ const CounterComponent = (props) => {
             </div>
             <div className="d-grid gap-2 mx-auto col-6">
                 <h2 className="text-primary text-center">
-                    {props.count}
+                    {count}
                 </h2>
                 <button className="btn btn-primary" onClick={
                     (e) => {
-                        props.inc(5);
+                        dispatch(increment())
                     }
                 }>
                     <span className='fs-4'>+</span>
                 </button>
                 <button className="btn btn-primary" onClick={
                     (e) => {
-                        props.dec(5);
+                        dispatch(decrement())
                     }
                 }>
                     <span className='fs-4'>-</span>
                 </button>
                 <button className="btn btn-primary" onClick={
                     (e) => {
-                        props.mul(5);
+                        dispatch(incrementBy(5))
                     }
                 }>
-                    <span className='fs-4'>*</span>
+                    <span className='fs-4'>+ by 5</span>
+                </button>
+                <button className="btn btn-primary" onClick={
+                    (e) => {
+                        dispatch(decrementBy(5))
+                    }
+                }>
+                    <span className='fs-4'>- by 5</span>
                 </button>
             </div>
         </>
