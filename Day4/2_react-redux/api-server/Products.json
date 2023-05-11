@@ -11,6 +11,18 @@
       "name": "Item Two",
       "description": "Super Widget",
       "status": "Not Available"
+    },
+    {
+      "id": 3,
+      "name": "Item Three",
+      "description": "Super Gadget",
+      "status": "Available"
+    },
+    {
+      "id": 4,
+      "name": "Item Four",
+      "description": "Widget",
+      "status": "Available"
     }
   ]
 }

@@ -20,6 +20,22 @@ const productReducer = (state = initialState.productsData, action) => {
                 status: action.payload.message,
                 flag: action.payload.flag
             };
+        case actionTypes.INSERT_PRODUCT_SUCCESS:
+            return {
+                products: [...state.products, { ...action.payload.data }],
+                status: action.payload.message,
+                flag: action.payload.flag
+            };
+        case actionTypes.UPDATE_PRODUCT_SUCCESS:
+            var itemIndex = state.products.findIndex(p => p.id === parseInt(action.payload.data.id));
+            var tempProducts = [...state.products];
+            tempProducts.splice(itemIndex, 1, { ...action.payload.data });
+
+            return {
+                products: [...tempProducts],
+                status: action.payload.message,
+                flag: action.payload.flag
+            };
         default:
             return state;
     }

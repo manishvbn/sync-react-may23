@@ -9,6 +9,7 @@ const HomeComponent = lazy(() => import('../components/home/HomeComponent'));
 const CCouterContainer = lazy(() => import("../containers/counter/CCouterContainer"));
 const FCounterContainer = lazy(() => import("../containers/counter/FCounterContainer"));
 const ProductsContainer = lazy(() => import("../containers/products/ProductsContainer"));
+const ManageProductContainer = lazy(() => import("../containers/products/ManageProductContainer"));
 
 const img404 = require('../assets/http-404.jpg');
 
@@ -21,6 +22,8 @@ export default (
             <Route path="/fcounter" component={FCounterContainer} />
             <Route path="/fcounterroot" component={FCounterRoot} />
             <Route path="/products" component={ProductsContainer} />
+            <Route path="/product/:id" component={ManageProductContainer} />
+            <Route path="/product" component={ManageProductContainer} />
             <Route path="*">
                 <NoMatch />
             </Route>

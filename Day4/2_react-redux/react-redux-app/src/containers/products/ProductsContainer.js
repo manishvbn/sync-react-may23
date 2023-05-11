@@ -4,35 +4,38 @@ import { connect } from 'react-redux';
 import * as productActions from '../../actions/productActions';
 import LoaderAnimation from '../../components/common/LoaderAnimation';
 import ProductListComponent from '../../components/products/ProductListComponent';
+import AddProductButton from '../../components/products/AddProductButton';
 
 class ProductsContainer extends Component {
     render() {
         return (
-            // <>
-            //     {
-            //         this.props.flag
-            //             ? <>
-            //                 <button className='btn btn-primary' onClick={(e) => {
-            //                     this.props.loadProducts();
-            //                 }}>Load Products</button>
-            //                 <ProductListComponent products={this.props.products} />
-            //             </>
-            //             : <LoaderAnimation />
-            //     }
-            // </>
-
             <>
-                <button className='btn btn-primary' onClick={(e) => {
-                    this.props.loadProducts();
-                }}>Load Products</button>
-                <ProductListComponent products={this.props.products} />
+                {
+                    this.props.flag
+                        ? <>
+                            <AddProductButton />
+                            <hr />
+                            <ProductListComponent products={this.props.products} />
+                        </>
+                        : <LoaderAnimation />
+                }
             </>
+
+            // <>
+            //     <button className='btn btn-primary' onClick={(e) => {
+            //         this.props.loadProducts();
+            //     }}>Load Products</button>
+
+            //     <AddProductButton />
+
+            //     <ProductListComponent products={this.props.products} />
+            // </>
         );
     }
 
-    // componentDidMount() {
-    //     this.props.loadProducts();
-    // }
+    componentDidMount() {
+        this.props.loadProducts();
+    }
 }
 
 function mapStateToProps(state) {
