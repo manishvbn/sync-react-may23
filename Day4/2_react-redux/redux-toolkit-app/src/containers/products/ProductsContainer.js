@@ -15,11 +15,7 @@ class ProductsContainer extends Component {
                         ? <>
                             <AddProductButton />
                             <hr />
-                            <ProductListComponent products={this.props.products} onDelete={
-                                (p, e) => {
-                                    this.props.deleteProduct(p);
-                                }
-                            } />
+                            <ProductListComponent products={this.props.products} />
                         </>
                         : <LoaderAnimation />
                 }
@@ -52,8 +48,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        loadProducts: () => { dispatch(productActions.loadProducts()); },
-        deleteProduct: (product) => { dispatch(productActions.deleteProduct(product)); }
+        loadProducts: () => { dispatch(productActions.loadProducts()); }
     };
 }
 

@@ -36,12 +36,6 @@ const productReducer = (state = initialState.productsData, action) => {
                 status: action.payload.message,
                 flag: action.payload.flag
             };
-        case actionTypes.DELETE_PRODUCT_SUCCESS:
-            return {
-                products: [...state.products.filter(p => p.id !== parseInt(action.payload.data.id))],
-                status: action.payload.message,
-                flag: action.payload.flag
-            };
         default:
             return state;
     }

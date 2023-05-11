@@ -75,23 +75,3 @@ export function updateProduct(product, navigateCB) {
         });
     };
 }
-
-// ----------------------------- DELETE
-function deleteProductSuccess(product, msg) {
-    return {
-        type: actionTypes.DELETE_PRODUCT_SUCCESS,
-        payload: { data: product, message: msg, flag: true }
-    };
-}
-
-export function deleteProduct(product) {
-    return function (dispatch) {
-        // TO DO - Delete Requested
-
-        productAPIClient.deleteProduct(product).then(() => {
-            dispatch(deleteProductSuccess(product, "Product Deleted Successfully...."));
-        }).catch(eMsg => {
-            // TO DO - Delete Failed
-        });
-    };
-}

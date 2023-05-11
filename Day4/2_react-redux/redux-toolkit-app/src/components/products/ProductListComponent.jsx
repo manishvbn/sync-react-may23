@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ConfirmModal from '../common/ConfirmModal';
 
-const ProductListComponent = ({ products, onDelete }) => {
+const ProductListComponent = ({ products }) => {
     return (
         <table className="table table-hover">
             <thead>
@@ -18,14 +18,14 @@ const ProductListComponent = ({ products, onDelete }) => {
             <tbody>
                 {
                     products.map(product => <ProductListRow key={product.id}
-                        product={product} onDelete={onDelete} />)
+                        product={product} />)
                 }
             </tbody>
         </table>
     );
 };
 
-const ProductListRow = ({ product, onDelete }) => {
+const ProductListRow = ({ product }) => {
     const [show, setShow] = useState(false);
 
     return (
@@ -50,7 +50,6 @@ const ProductListRow = ({ product, onDelete }) => {
             <ConfirmModal show={show} title={"Confirm Delete"}
                 message={"Are you sure, you want to delete this record?"}
                 handleYes={e => {
-                    onDelete(product, e);
                     setShow(false);
                 }}
                 handleNo={e => {
