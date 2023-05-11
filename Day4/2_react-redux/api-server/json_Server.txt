@@ -1,5 +1,5 @@
 Open cmd prompt (terminal window) on api-server folder path
  
-npm install -g json-server
+npm install -g json-server (Only Once)
 
 json-server --watch -p 8001 Products.json
